@@ -71,15 +71,6 @@ npm run package                          # produces lottie-view-<version>.vsix
 code --install-extension lottie-view-1.0.0.vsix
 ```
 
-To publish to the Marketplace:
-
-```sh
-npx @vscode/vsce login Tayari24
-npx @vscode/vsce publish
-```
-
-Requires an Azure DevOps PAT and a publisher profile at <https://marketplace.visualstudio.com/manage>.
-
 ## Contributing
 
 Issues and pull requests are welcome at <https://github.com/tayari24/Lottie-View>.

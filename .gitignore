@@ -134,3 +134,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+jetbrains-extension/build/
+**/build/
+*.vsix
+lottie-view-*.zip
+.gradle/

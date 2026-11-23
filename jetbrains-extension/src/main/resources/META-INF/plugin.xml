@@ -1,0 +1,27 @@
+<idea-plugin>
+  <id>com.tayari24.lottieview</id>
+  <name>Lottie View</name>
+  <vendor email="hello@tayari24.com" url="https://tayari24.com">Tayari24</vendor>
+
+  <description><![CDATA[
+    Preview <b>.lottie</b> and Lottie JSON animations directly inside the IDE — like images.<br><br>
+    <ul>
+      <li>Opens .lottie (dotLottie) packages in a preview tab automatically</li>
+      <li>Lottie .json files show a preview alongside the text editor</li>
+      <li>Play, pause, and restart controls</li>
+      <li>Embedded images inside .lottie packages are rendered</li>
+      <li>Runs fully offline in an embedded Chromium (JCEF) panel</li>
+    </ul>
+    Free and open source (MIT) —
+    <a href="https://github.com/tayari24/Lottie-View">github.com/tayari24/Lottie-View</a>
+  ]]></description>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileType name="Lottie" language="" binary="true"
+              implementationClass="com.tayari24.lottieview.LottieFileType"
+              fieldName="INSTANCE" extensions="lottie"/>
+    <fileEditorProvider implementation="com.tayari24.lottieview.LottieFileEditorProvider"/>
+  </extensions>
+</idea-plugin>

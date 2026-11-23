@@ -1,0 +1,8 @@
+node_modules/
+media/viewer-src.js
+.vscode/
+*.vsix
+loading.lottie
+loading.json
+nul
+Lottie View/

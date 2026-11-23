@@ -1,0 +1,77 @@
+{
+  "name": "lottie-view",
+  "displayName": "Lottie View",
+  "description": "Instantly preview .lottie and Lottie JSON animations inside VS Code — playback controls, embedded asset support, works offline.",
+  "version": "1.0.0",
+  "publisher": "Tayari24",
+  "license": "MIT",
+  "author": {
+    "name": "Tayari24",
+    "url": "https://tayari24.com/"
+  },
+  "homepage": "https://github.com/tayari24/Lottie-View#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tayari24/Lottie-View.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tayari24/Lottie-View/issues"
+  },
+  "icon": "icon.png",
+  "keywords": [
+    "lottie",
+    "animation",
+    "preview",
+    "dotlottie",
+    "lottiefiles",
+    "motion",
+    "design"
+  ],
+  "galleryBanner": {
+    "color": "#1E1E2E",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "lottiePreview.lottie",
+        "displayName": "Lottie Preview",
+        "selector": [
+          {
+            "filenamePattern": "*.lottie"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "lottiePreview.json",
+        "displayName": "Lottie Preview",
+        "selector": [
+          {
+            "filenamePattern": "*.json"
+          }
+        ],
+        "priority": "option"
+      }
+    ]
+  },
+  "scripts": {
+    "bundle": "esbuild media/viewer-src.js --bundle --format=iife --minify --outfile=media/viewer.js",
+    "vscode:prepublish": "npm run bundle",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "jszip": "^3.10.1",
+    "lottie-web": "^5.12.2"
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lottie View</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: flex; flex-direction: column; align-items: center;
+      background: #1e1e2e; color: #cdd6f4;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+    header {
+      width: 100%; box-sizing: border-box;
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 20px; background: #181825; border-bottom: 1px solid #313244;
+    }
+    header img { width: 24px; height: 24px; }
+    #filename { font-size: 13px; color: #a6adc8; }
+    .spacer { flex: 1; }
+    main {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 16px;
+    }
+    #toolbar { display: none; gap: 8px; }
+    button {
+      background: #89b4fa; color: #1e1e2e; border: none; border-radius: 6px;
+      padding: 6px 14px; font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    button:hover { background: #b4befe; }
+    #anim { display: none; width: 320px; height: 320px; }
+    #anim svg { width: 100%; height: 100%; }
+    #empty { display: none; text-align: center; color: #7f849c; font-size: 14px; }
+    #empty .hint { font-size: 12px; margin-top: 8px; }
+    #error { display: none; max-width: 80%; color: #f38ba8; white-space: pre-wrap; font-size: 12px; }
+    input[type="file"] { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="icon.png" alt="">
+    <span id="filename">Lottie View</span>
+    <span class="spacer"></span>
+    <button id="open">Open file</button>
+  </header>
+  <main>
+    <div id="toolbar">
+      <button id="playpause">Pause</button>
+      <button id="restart">Restart</button>
+    </div>
+    <div id="anim"></div>
+    <div id="empty">
+      No file loaded.
+      <div class="hint">Drag a .lottie or .json file anywhere on this page.</div>
+    </div>
+    <div id="error"></div>
+  </main>
+  <input type="file" id="file" accept=".lottie,.json">
+  <script src="viewer.js"></script>
+</body>
+</html>

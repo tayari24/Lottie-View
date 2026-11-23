@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Lottie View",
+  "short_name": "Lottie View",
+  "version": "1.0.0",
+  "description": "Preview .lottie and Lottie JSON animations in your browser — by Tayari24.",
+  "author": "Tayari24",
+  "homepage_url": "https://github.com/tayari24/Lottie-View",
+  "developer": {
+    "name": "Tayari24",
+    "url": "https://tayari24.com/"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png",
+    "default_title": "Lottie View"
+  }
+}
